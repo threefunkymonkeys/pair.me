@@ -1,5 +1,8 @@
 PairMe::Application.routes.draw do
   resources :users
+  get 'sessions/new' => 'sessions#new', :as => :login
+  post 'sessions' => 'sessions#create'
+  get 'sessions/destroy' => 'sessions#destroy', :as => :logout 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
