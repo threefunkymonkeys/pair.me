@@ -1,0 +1,63 @@
+//	This file is part of the "jQuery.Syntax" project, and is distributed under the MIT License.
+//	Copyright (c) 2011 Samuel G. D. Williams. <http://www.oriontransfer.co.nz>
+//	See <jquery.syntax.js> for licensing details.
+
+.syntax
+  font-family: Menlo, Monaco, Consolas, monospace
+  line-height: 1.5em
+
+  .function
+    color: #33f
+
+  .keyword, .access
+    color: #a90d91
+
+  .type
+    color: #3239A6
+    font-weight: bold
+
+  .comment
+    color: #6ac
+    font-style: italic
+
+  .constant
+    color: #1c00ce
+
+  .string
+    color: #c41a15
+
+  .string .escape
+    color: #f99
+
+  .operator
+    color: #000000
+
+  .href
+    color: #0e0eff
+    text-decoration: underline
+
+  .variable
+    color: #3e6d74
+
+  .highlight
+    background-color: opacify(#fdfdba, 0.5)
+
+  pre
+    overflow: auto
+    font-family: inherit
+
+.syntax-container
+  position: relative
+  .toolbar
+    font-size: 80%
+    text-align: right
+    padding: 0 0.2em 0.2em
+    a
+      margin-left: 1em
+
+  pre.raw
+    overflow: auto
+    padding: 0 0.4em 0 !important
+    margin: 0 !important
+    background-color: $background-primary
+    border: 1px solid $border-primary
