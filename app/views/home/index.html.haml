@@ -1,5 +1,7 @@
 %h1 Your Friends
 %ul#friendsList
+  -current_user.friends.each do |friend|
+    %li.friend=friend.email
 
 
 %h2 Your friend is not here? Send an invitation
