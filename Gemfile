@@ -28,4 +28,7 @@ gem 'haml-rails'
 group :test do
   # Pretty printed test output
   gem 'rspec-rails'
+  gem 'wirble'
+  gem 'hirb'
+  gem 'interactive_editor'
 end
