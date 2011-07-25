@@ -25,10 +25,16 @@ gem 'haml-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'rspec-rails'
+
+group :test, :development do
   gem 'wirble'
   gem 'hirb'
   gem 'interactive_editor'
+  gem 'rspec-rails'
+end
+group :test do
+  # Pretty printed test output
+  gem 'guard-rspec'
+  gem 'capybara'
+  gem 'summoner'
 end
