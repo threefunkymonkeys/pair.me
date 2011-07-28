@@ -1,0 +1,35 @@
+=border-radius($radius)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -webkit-background-clip: padding-box
+
+=border-radius-top($radius)
+  -moz-border-radius-topright: $radius
+  -moz-border-radius-topleft: $radius
+  -webkit-border-top-right-radius: $radius
+  -webkit-border-top-left-radius: $radius
+  -webkit-background-clip: padding-box
+
+=border-radius-bottom($radius)
+  -moz-border-radius-bottomright: $radius
+  -moz-border-radius-bottomleft: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -webkit-border-bottom-left-radius: $radius
+  -webkit-background-clip: padding-box
+
+=box-shadow($hpad, $vpad, $blur, $color: #888)
+  -moz-box-shadow: $hpad $vpad $blur $color
+  -webkit-box-shadow: $hpad $vpad $blur $color
+  box-shadow: $hpad $vpad $blur $color
+
+=linear-gradient($x0, $y0, $xn, $yn, $from, $to)
+  background: -webkit-gradient(linear, $x0 $y0, $xn $yn, from($from), to($to))
+
+=gradient-bg($color1, $color2)
+  background-color: $color1
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color2})
+  background-image: -moz-linear-gradient(center top, $color1, $color2)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2))
+
+=vertical-linear-gradient($from, $to)
+  +linear-gradient(0%, 0%, 0%, 100%, $from, $to)
