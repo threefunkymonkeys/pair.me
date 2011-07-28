@@ -1,14 +1,17 @@
-%h1 Your Friends
-%ul#friendsList
-  -current_user.friends.each do |friend|
-    %li.friend=friend.email
+.container
+  %section#friendsSection
+    %h1 Your Friends
+    %ul#friendsList
+      -current_user.friends.each do |friend|
+        %li.friend=friend.email
 
-
-%h2 Your friend is not here? Send an invitation
-.field
-  =form_tag "/users/invite" do
-    =label_tag :email, "Your friend's email"
-    =email_field_tag :email
-    =submit_tag "Send"
+  %section#inviteSection
+    %h1 Your friend is not here?
+    %h3 Send an invitation
+    .field
+      =form_tag "/users/invite" do
+        =label_tag :email, "Your friend's email"
+        =email_field_tag :email
+        =submit_tag "Send"
 
 

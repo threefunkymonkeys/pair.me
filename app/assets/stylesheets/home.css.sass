@@ -1,0 +1,42 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//=border-radius($radius)
+  //-moz-border-radius: $radius
+  //-webkit-border-radius: $radius
+  //-webkit-background-clip: padding-box
+
+
+@import "mixins"
+@import "font_faces"
+
+body
+  header#appHeader
+    font-family: HammersmithOne
+    font-size: 4em
+
+  section#friendsSection, section#inviteSection
+    display: inline-block
+    *display: inline
+    zoom: 1
+    vertical-align: top
+    height: 100%
+    width: 30%
+
+  section#friendsSection
+    padding-right: 11em
+    h1
+
+  section#inviteSection
+    padding-left: 11em
+
+  ul#friendsList
+    list-style: none
+    padding: 0
+
+    li.friend
+      height: 2em
+      line-height: 2em
+      background: url('/assets/user-icon.png') no-repeat scroll 0 3px transparent
+      padding: 0.1em 0.3em 0.1em 25px

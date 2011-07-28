@@ -1,4 +1,29 @@
+@import "mixins"
+@import "font_faces"
+
+$bg_color: #A8BEA9
+
 .field
   label
     display: block
     
+
+body
+  height: 100%
+  padding: 0 10%
+  background-color: $bg_color
+  text-align: center
+
+  .container
+    font-family: VarelaRoundRegular
+    position: relative
+    display: block
+    text-align: left
+    height: 100%
+    background-color: white
+    padding: 2em
+    +border-radius(5px)
+
+  input[type='text'], input[type='email'], input[type='password']
+    border: solid 1px
+    +border-radius(5px)
