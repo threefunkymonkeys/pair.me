@@ -31,6 +31,7 @@ GEM
       activesupport (= 3.1.0.rc4)
     activesupport (3.1.0.rc4)
       multi_json (~> 1.0)
+    addressable (2.2.6)
     arel (2.1.1)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
@@ -48,7 +49,11 @@ GEM
       execjs
     coffee-script-source (1.1.1)
     diff-lcs (1.1.2)
+    em-websocket (0.3.0)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
     erubis (2.7.0)
+    eventmachine (0.12.10)
     execjs (1.2.0)
       multi_json (~> 1.0)
     ffi (1.0.9)
@@ -155,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-script
+  em-websocket (= 0.3.0)
   guard-rspec
   haml-rails
   hirb
