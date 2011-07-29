@@ -6,12 +6,16 @@ $bg_color: #A8BEA9
 .field
   label
     display: block
-    
+
+.blue
+  color: #3F65CE
+
+html
+  height: 100%
+  +gradient-bg(#B9B9B9, #DCDCDC)
 
 body
-  height: 100%
   padding: 0 10%
-  background-color: $bg_color
   text-align: center
 
   .container
@@ -27,3 +31,10 @@ body
   input[type='text'], input[type='email'], input[type='password']
     border: solid 1px
     +border-radius(5px)
+
+
+.even
+  background-color: #DCDCDC !important
+
+.odd
+  background-color: #B9B9B9 !important
