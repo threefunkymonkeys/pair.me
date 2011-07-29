@@ -35,8 +35,21 @@ body
     list-style: none
     padding: 0
 
+    li.friend:first-child
+      +border-radius-top(5px)
+
+    li.friend:last-child
+      +border-radius-bottom(5px)
+
     li.friend
       height: 2em
       line-height: 2em
       background: url('/assets/user-icon.png') no-repeat scroll 0 3px transparent
       padding: 0.1em 0.3em 0.1em 25px
+      cursor: pointer
+
+      a
+        color: black
+        text-decoration: none
+        width: 100%
+        display: block

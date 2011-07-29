@@ -3,7 +3,8 @@
     %h1 Your Friends
     %ul#friendsList
       -current_user.friends.each do |friend|
-        %li.friend=friend.email
+        %li.friend{ :class => cycle("even", "odd") }
+          =link_to friend.email
 
   %section#inviteSection
     %h1 Your friend is not here?
