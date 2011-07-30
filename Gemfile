@@ -16,26 +16,22 @@ gem 'jquery-rails'
 
 gem 'haml-rails'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 gem 'em-websocket', '0.3.0'
 
 group :test, :development do
+  gem 'ruby-debug19'
+  gem 'rb-inotify'
+  gem 'libnotify'
   gem 'wirble'
   gem 'hirb'
   gem 'interactive_editor'
   gem 'rspec-rails'
+  gem 'spork', '~> 0.9.0.rc'
 end
 group :test do
   # Pretty printed test output
   gem 'guard-rspec'
-  gem 'capybara'
+  #gem 'capybara'
+  gem 'webrat'
   gem 'summoner'
 end
