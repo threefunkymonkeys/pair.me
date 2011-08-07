@@ -4,10 +4,12 @@ initBrowserWarning = ->
   $("#browser-warning").fadeIn 125  if not isChrome and not isFirefox
 
 initDnD = ->
+  dropOverlay = document.getElementById("drop-box-overlay")
   $("html").bind "dragenter", onDragEnter
-  document.getElementById("drop-box-overlay").addEventListener "dragleave", onDragLeave, false
-  document.getElementById("drop-box-overlay").addEventListener "dragover", noopHandler, false
-  document.getElementById("drop-box-overlay").addEventListener "drop", onDrop, false
+  if dropOverlay
+    dropOverlay.addEventListener "dragleave", onDragLeave, false
+    dropOverlay.addEventListener "dragover", noopHandler, false
+    dropOverlay.addEventListener "drop", onDrop, false
 
 initEditor = ->
 noopHandler = (evt) ->
