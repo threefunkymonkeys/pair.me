@@ -1,0 +1,17 @@
+.container
+  #upload-status-text
+  %textarea#fileBuffer{ :class => "brush: ruby" }
+      
+  #drop-box-overlay
+    #drop-box-prompt
+      Drag a file to the window to start sharing!
+
+
+  #sharingList
+    %h4 You're sharing with..
+    %ul#friendsList
+      %li.friend{ :title => "Waiting for #{@friend.email}" }
+        = @friend.email
+
+    
+
