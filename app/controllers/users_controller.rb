@@ -11,4 +11,8 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+  def editor
+    @friend = current_user.friends.find(params[:friend_id])
+  end
 end

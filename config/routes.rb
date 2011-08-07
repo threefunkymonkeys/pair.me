@@ -6,6 +6,8 @@ PairMe::Application.routes.draw do
   post 'sessions' => 'sessions#create'
   get 'sessions/destroy' => 'sessions#destroy', :as => :logout 
 
+  match 'users/:id/editor/:friend_id' => 'users#editor', :as => :user_editor
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

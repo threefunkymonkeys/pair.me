@@ -4,7 +4,7 @@
     %ul#friendsList
       -current_user.friends.each do |friend|
         %li.friend{ :class => cycle("even", "odd") }
-          =link_to friend.email
+          =link_to friend.email, "/users/#{current_user.id}/editor/#{friend.id}"
 
   %section#inviteSection
     %h1 Your friend is not here?
