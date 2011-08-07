@@ -1,18 +1,21 @@
 @import "mixins"
 @import "font_faces"
 
-$bg_color: #A8BEA9
+$bg_color:      #A8BEA9
+$bg_from_color: #1F1F1F
+$bg_to_color:   #4B4B4B
+$even_bg_color: #DCDCDC
+$odd_bg_color:  #B9B9B9
 
 .field
   label
     display: block
 
-.blue
-  color: #3F65CE
 
 html
   height: 100%
-  +gradient-bg(#B9B9B9, #DCDCDC)
+  +gradient-bg($bg_from_color, $bg_to_color)
+  //+gradient-bg(#B9B9B9, #DCDCDC)
 
 body
   padding: 0 10%
@@ -32,9 +35,13 @@ body
     border: solid 1px
     +border-radius(5px)
 
+  header#appHeader
+    color: white
+    .highlite
+      color: red
 
 .even
-  background-color: #DCDCDC !important
+  background-color: $even_bg_color !important
 
 .odd
-  background-color: #B9B9B9 !important
+  background-color: $odd_bg_color !important
